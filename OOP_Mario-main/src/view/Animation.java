@@ -1,0 +1,42 @@
+package view;
+import java.awt.image.BufferedImage;
+
+public class Animation {
+
+    private int index = 0, count = 0;
+    private BufferedImage[] leftFrames, rightFrames;
+    private BufferedImage currentFrame;
+
+    public Animation(BufferedImage[] leftFrames, BufferedImage[] rightFrames){
+        this.leftFrames = leftFrames;
+        this.rightFrames = rightFrames;
+
+        currentFrame = rightFrames[1];
+    }
+
+    public BufferedImage animate(int speed, boolean toRight){
+        count+=1;
+        BufferedImage[] frames = toRight ? rightFrames : leftFrames;
+
+        if(count > speed){
+            nextFrame(frames);
+            count = 0;
+        }
+
+        return currentFrame;
+    }
+
+    private void nextFrame(BufferedImage[] frames) {
+        index = (index + 1) % frames.length;
+        currentFrame = frames[index];
+    }
+
+    public BufferedImage[] getLeftFrames() {
+        return leftFrames;
+    }
+
+    public BufferedImage[] getRightFrames() {
+        return rightFrames;
+    }
+
+}
