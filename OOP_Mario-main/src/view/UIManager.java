@@ -2,8 +2,6 @@ package view;
 
 import manager.GameStatus;
 
-import controller.GameController;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
