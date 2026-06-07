@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
  * Ref UML: CD, OD
  * Derivation: Base of the entire object hierarchy; physics methods derived from AD01 update model.
  */
-public abstract class GameObject {
+public class GameObject {
 
     private double x, y;
     private double velX, velY;

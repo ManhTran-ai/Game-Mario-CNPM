@@ -1,4 +1,4 @@
-package test.nguoi2;
+package test.Tai;
 
 import controller.CollisionSystem;
 import manager.Camera;
