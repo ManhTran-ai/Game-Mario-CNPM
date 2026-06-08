@@ -1,4 +1,4 @@
-﻿package test.nguoi4;
+package test.nguoi4;
 
 import manager.MapManager;
 import model.Enemy.Enemy;
